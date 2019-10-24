@@ -8,6 +8,7 @@ package ejercicios3;
 import java.time.LocalDate;
 import java.time.Month;
 import javax.swing.JOptionPane;
+import java.time.temporal.ChronoUnit;
 
 /**
  *
@@ -32,18 +33,29 @@ public class ej4 {
    LocalDate date2 =LocalDate.of(dia2, mes2, año2);
  JOptionPane.showMessageDialog(null,date2);
    
-   
-  if(date1.getDayOfYear()>date2.getDayOfYear())
-  {diasdif1=date1.getDayOfYear()+ date2.getDayOfYear();
-    diasdif1= diasdif1 - date2.getDayOfYear();
-    JOptionPane.showMessageDialog(null,date2.getDayOfYear()+""+date1.getDayOfYear()2);
-     
-  JOptionPane.showMessageDialog(null,diasdif1+""+"dias de diferencia de la fecha 1 a la 2");}
   
-  else{if(date2.getDayOfYear()>date1.getDayOfYear())
-  {   diasdif2=date2.getDayOfYear()+date1.getDayOfYear();
-       diasdif2= diasdif2 -date1.getDayOfYear();
-        JOptionPane.showMessageDialog(null,diasdif2+""+"dias de diferencia de la fecha 2 a la 1");}}
+    JOptionPane.showMessageDialog(null,date2.getDayOfYear()+" "+" "+date1.getDayOfYear());
+    
+   long c = java.time.temporal.ChronoUnit.DAYS.between(date1, date2);
+    
+    JOptionPane.showMessageDialog(null,c+"dias de diferencia entre la fecha 1 con la 2 ");
+    
+    }   
+
+   
+   
+   
+  
+       
+   
+   
+   
+   
+   
+   
+   }
+  
+ 
    
     
     
@@ -55,6 +67,6 @@ public class ej4 {
    
    
    
-   }
+ 
     
 }
