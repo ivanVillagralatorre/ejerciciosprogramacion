@@ -104,7 +104,10 @@ public class ej10 {
 
     public static void diag2(int[][] arraybidimensional) {
         int diagonal2 = 0;
-        diagonal2 += arraybidimensional[0][3] + arraybidimensional[1][2] + arraybidimensional[2][1] + arraybidimensional[3][0];
+       for(int x=0, y=3 ;x<=0 ;x++,y--)
+       {
+           diagonal2+=arraybidimensional[x][y];
+       }
         JOptionPane.showMessageDialog(null, diagonal2);
     }
 
