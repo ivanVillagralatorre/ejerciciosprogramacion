@@ -17,8 +17,9 @@ public class ejercicio8 {
         int[] codigos = new int[5];
         int[] faltas = new int[5];
         String resultado = "";
+       
 
-        ope( codigos,  faltas);
+        ope( codigos,faltas);
         
 
         res(codigos, faltas, resultado);
@@ -36,28 +37,27 @@ public class ejercicio8 {
     }
    
     public static void ope(int[] codigos, int[] faltas){
-        String pregunta="";
-while(!pregunta.equals("no")){
-        for (int x = 0; x < codigos.length; x++) {
-      try {   
-                   codigos[x] = Integer.parseInt(JOptionPane.showInputDialog("introduce el numero de alumno"));
-                } catch (NumberFormatException o) {JOptionPane.showMessageDialog(null, "tipo int");}
-                catch (NullPointerException a) {JOptionPane.showMessageDialog(null, "exit");}
-                catch (Exception e) {JOptionPane.showMessageDialog(null, "errores genericos");}
-      
-   }   
-           
+      String pregunta="";
+      int count=0;  
 
-for (int i = 0; i < faltas.length; i++) {
-                try {
-                    
-                    faltas[i] = Integer.parseInt(JOptionPane.showInputDialog("numero de faltas que a tenido"));
+      
+      
+      
+      
+      do{
+       count++;
+              
+                     codigos[count] = Integer.parseInt(JOptionPane.showInputDialog("introduce el numero de alumno"));
+                    faltas[count] = Integer.parseInt(JOptionPane.showInputDialog("numero de faltas que a tenido"));
                      pregunta=JOptionPane.showInputDialog("¿Quieres continuar?");
-                } catch (NumberFormatException o) {JOptionPane.showMessageDialog(null, "tipo int");}
-                catch (NullPointerException a) {JOptionPane.showMessageDialog(null, "exit");}
-                catch (Exception e) {JOptionPane.showMessageDialog(null, "errores genericos");}
-            }
-  }
-        }
-    }
+               
+            }while(!pregunta.equals("no"));
+                  
+
+}
+ 
+
+}
+ 
+    
 
