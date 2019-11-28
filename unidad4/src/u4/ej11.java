@@ -19,18 +19,20 @@ public class ej11 {
         String[][] nombre = new String[4][4];
         double[][] precio = new double[4][4];
         int[][] can = new int[4][4];
-      arrais( nombre, precio, can);
+        int[][] ventas=new int [4][4];
+      llenararrais( nombre, precio, can);
        
 
-        do {
+        do {try{
 
             menu = menu();
-          switchh(apagar,  menu, nombre, precio, can);
+          switchh(apagar,  menu, nombre, precio, can,ventas);
+        }catch(Exception e){JOptionPane.showMessageDialog(null,"problemas");}
         } while (menu!=3);
-
+      ven( nombre, precio, ventas);
     }
 
-    public static void arrais(String[][] nombre,double[][] precio, int[][] can) {
+    public static void llenararrais(String[][] nombre,double[][] precio, int[][] can)  {
         nombre[0][0] = "kitkat";
         nombre[0][1] = "chicles de fresa";
         nombre[0][2] = "lacasitos";
@@ -84,7 +86,7 @@ public class ej11 {
 
     }
 
-    public static int menu() {
+    public static int menu() throws Exception {
 
         int opcion = Integer.parseInt(JOptionPane.showInputDialog("\n0-" + "Pedir golosina"
                 + "\n1-" + "mostrar golosinas"
@@ -95,7 +97,7 @@ public class ej11 {
 
     }
 
-    public static void switchh(boolean apagar, int menu,String[][] nombre,double[][] precio,int[][] can) {
+    public static void switchh(boolean apagar, int menu,String[][] nombre,double[][] precio,int[][] can,int[][] ventas) throws Exception {
 
         switch (menu) {
 
@@ -110,8 +112,10 @@ public class ej11 {
                      JOptionPane.showMessageDialog(null,"el producto se ha agotado" );
                      }
                      else
-                   JOptionPane.showMessageDialog(null,"Has pedido la golosina:"+"    "+nombre[fila][columna]+
-                                                "a un precio de  " + "   "+precio[fila][columna]+"€");
+                     { ventas[fila][columna]+=1;
+                         
+                         JOptionPane.showMessageDialog(null,"Has pedido la golosina:"+"    "+nombre[fila][columna]+
+                                                "a un precio de  " + "   "+precio[fila][columna]+"€");}
                    
                 break;
             case 1:
@@ -148,4 +152,14 @@ public class ej11 {
 
     }
 
+    public static void ven(String[][] nombre,double[][] precio,int[][] ventas){
+            String res="";
+         for(int x=0;x<nombre.length;x++)
+                   { for(int y=0;y<nombre[x].length;y++)
+                {res+="\n"+"producto"+" "+nombre[x][y]+"precio:"+"  "+precio[x][y]+"  "+"se han vendido "+" "+ventas[x][y] ;
+                }}
+    
+         JOptionPane.showMessageDialog(null, res);
+        
+    }
 }
