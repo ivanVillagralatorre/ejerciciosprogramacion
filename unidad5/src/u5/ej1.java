@@ -20,6 +20,10 @@ public class ej1 {
      */
     public static void main(String[] args)  {
         ArrayList<Integer> numero = new ArrayList();
+        for(int i=0;i<10;i++)
+        {numero.add(i);}
+        
+        
         numero.add(10);
          int menu=0;
 
@@ -72,7 +76,7 @@ public class ej1 {
     public static int men() throws Exception{
     int menu=0;
         try{
-         menu = Integer.parseInt(JOptionPane.showInputDialog("\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"+"\n"));
+         menu = Integer.parseInt(JOptionPane.showInputDialog("\n-1"+"\n-2"+"\n-3"+"\n-4"+"\n-5"+"\n-6"+"\n-7"+"\n-8"+"\n-9"+"\n-10"));
                if(menu<1)
                {throw new exceptionL();}
                if(menu>10)
@@ -175,6 +179,7 @@ public class ej1 {
 
         int suma = 0;
         int prom;
+        
         for (int x : numero) {
             suma += numero.get(x);
         }
