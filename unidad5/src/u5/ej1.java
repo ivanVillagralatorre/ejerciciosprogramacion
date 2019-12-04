@@ -18,75 +18,87 @@ public class ej1 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
         ArrayList<Integer> numero = new ArrayList();
-        for(int i=0;i<10;i++)
-        {numero.add(i);}
-        
-        
+        llenar( numero);
+
         numero.add(10);
-         int menu=0;
+        int menu = 0;
 
         do {
             try {
-               menu = men();
-               
-                  
+                menu = men();
 
-                switch (menu) {
+                opciones(numero, menu);
 
-                    case 1:
-                        mayormenor(numero);
-                        break;
-                    case 2:
-                        buscar(numero);
-                        break;
-
-                    case 3:
-                        borrar(numero);
-                        break;
-
-                    case 4:
-                        array(numero);
-                        break;
-                    case 5:
-                        show(numero);
-                        break;
-                    case 6:
-                        add(numero);
-                        break;
-                    case 7:
-                        add2(numero);
-                        break;
-                    case 8:
-                        delete(numero);
-                        break;
-                    case 9:
-                        calc(numero);
-                        break;
-
-                }
-            } 
-            catch (NullPointerException a) {JOptionPane.showConfirmDialog(null,"errores genericos");}
-            catch (Exception e) {JOptionPane.showConfirmDialog(null,"errores genericos");}
+           
+            } catch (Exception e) {
+                JOptionPane.showConfirmDialog(null, "errores genericos");
+            }
         } while (menu != 10);
         // TODO code application logic here
     }
 
-    public static int men() throws Exception{
-    int menu=0;
-        try{
-         menu = Integer.parseInt(JOptionPane.showInputDialog("\n-1"+"\n-2"+"\n-3"+"\n-4"+"\n-5"+"\n-6"+"\n-7"+"\n-8"+"\n-9"+"\n-10"));
-               if(menu<1)
-               {throw new exceptionL();}
-               if(menu>10)
-               {throw new exceptionL();}
-               
-     }catch(exceptionL l){JOptionPane.showConfirmDialog(null,"errores genericos");}
-    return menu;
+  public static void llenar(ArrayList<Integer> numero){
+      for (int i = 0; i < 10; i++) {
+            numero.add(i);
+        }
+  }
+    
+    public static void opciones(ArrayList<Integer> numero, int menu) throws Exception {
+        switch (menu) {
+
+            case 1:
+                mayormenor(numero);
+                break;
+            case 2:
+                buscar(numero);
+                break;
+
+            case 3:
+                borrar(numero);
+                break;
+
+            case 4:
+                array(numero);
+                break;
+            case 5:
+                show(numero);
+                break;
+            case 6:
+                add(numero);
+                break;
+            case 7:
+                add2(numero);
+                break;
+            case 8:
+                delete(numero);
+                break;
+            case 9:
+                calc(numero);
+                break;
+
+        }
+
     }
-     
-    public static void mayormenor(ArrayList<Integer> numero)throws Exception {
+
+    public static int men() throws Exception {
+
+        int menu = 0;
+      
+            menu = Integer.parseInt(JOptionPane.showInputDialog("\n1-mayor y menor" + "\n2-buscar" + "\n3-borrar " + "\n4-convertir a array"
+                    + "\n5-mostrar arraylist" + "\n6-añadir" + "\n7-añadir a posicion concreta"
+                    + "\n8-norrar de posicion concreta" + "\n9-caclcular el total y el promedio del arraylist" + "\n-10"));
+            
+      
+            
+         
+          return menu;
+        }
+        
+    
+
+    public static void mayormenor(ArrayList<Integer> numero) throws Exception {
         String a = "";
 
         do {
@@ -105,41 +117,40 @@ public class ej1 {
 
     }
 
-    public static void buscar(ArrayList<Integer> numero)throws Exception {
+    public static void buscar(ArrayList<Integer> numero) throws Exception {
 
         int n = Integer.parseInt(JOptionPane.showInputDialog("introduce el numero que quieres buscar"));
 
-     
-            if (numero.indexOf(n) != -1) {
-                JOptionPane.showMessageDialog(null, "el numero si se encuentra en la lista");
-            } else {
-                JOptionPane.showMessageDialog(null, "el numero no se encuentra en la lista");
-    
+        if (numero.indexOf(n) != -1) {
+            JOptionPane.showMessageDialog(null, "el numero si se encuentra en la lista");
+        } else {
+            JOptionPane.showMessageDialog(null, "el numero no se encuentra en la lista");
+
         }
 
     }
 
-    public static void borrar(ArrayList<Integer> numero)throws Exception {
+    public static void borrar(ArrayList<Integer> numero) throws Exception {
         int n = Integer.parseInt(JOptionPane.showInputDialog("introduce el numero que que quieres eliminar"));
-       
-            if (numero.indexOf(n) != -1) {
-                numero.remove(n);
-            } else {
-                JOptionPane.showInputDialog("error no se encontro el numero que quieres borrrar");
-            
+
+        if (numero.indexOf(n) != -1) {
+            numero.remove(numero.indexOf(n));
+        } else {
+            JOptionPane.showInputDialog("error no se encontro el numero que quieres borrrar");
+
         }
 
     }
 
-    public static void array(ArrayList<Integer> numero)throws Exception {
+    public static void array(ArrayList<Integer> numero) throws Exception {
         Integer[] numeroarray = numero.toArray(new Integer[numero.size()]);
         JOptionPane.showMessageDialog(null, "lo has transformado en un array");
 
     }
 
-    public static void show(ArrayList<Integer> numero)throws Exception {
+    public static void show(ArrayList<Integer> numero) throws Exception {
         String res = "";
-        for (int x : numero) {
+        for (int x=0;x<numero.size();x++) {
             res += "\n" + numero.get(x);
         }
 
@@ -149,7 +160,7 @@ public class ej1 {
 
     }
 
-    public static void add(ArrayList<Integer> numero)throws Exception {
+    public static void add(ArrayList<Integer> numero) throws Exception {
         int n = Integer.parseInt(JOptionPane.showInputDialog("introduce el numero que que quieres añadir"));
 
         numero.add(n);
@@ -157,29 +168,31 @@ public class ej1 {
         JOptionPane.showMessageDialog(null, "añadiste el numero" + n + " " + "al arraylist");
     }
 
-    public static void add2(ArrayList<Integer> numero)throws Exception {
+    public static void add2(ArrayList<Integer> numero) throws Exception {
+        
+         int b = Integer.parseInt(JOptionPane.showInputDialog("introduce el numero de en que posicion lo   quieres añadir"));
         int n = Integer.parseInt(JOptionPane.showInputDialog("introduce el numero  que quieres añadir"));
-        int b = Integer.parseInt(JOptionPane.showInputDialog("introduce el numero de en que posicion lo   quieres añadir"));
+       
 
         numero.add(b, n);
 
         JOptionPane.showMessageDialog(null, "añadiste el numero" + numero.get(b) + " " + "al arraylist");
     }
 
-    public static void delete(ArrayList<Integer> numero)throws Exception {
+    public static void delete(ArrayList<Integer> numero) throws Exception {
 
         int b = Integer.parseInt(JOptionPane.showInputDialog("introduce el numero de en que posicion lo   quieres añadir"));
 
         numero.remove(b);
 
-        JOptionPane.showMessageDialog(null, "añadiste el numero ha sido eliminado");
+        JOptionPane.showMessageDialog(null, "el numero ha sido eliminado");
     }
 
-    public static void calc(ArrayList<Integer> numero)throws Exception {
+    public static void calc(ArrayList<Integer> numero) throws Exception {
 
         int suma = 0;
         int prom;
-        
+
         for (int x : numero) {
             suma += numero.get(x);
         }
@@ -192,3 +205,4 @@ public class ej1 {
     }
 
 }
+
