@@ -46,16 +46,7 @@ public class ejmain {
         Coche c2= new Coche("12222ssa","rgb");
         Coche c3= new Coche("ivenfmjs","primavera");
         
-        p1.setUnCoche(c3);
       
-        ArrayList<Coche> l= new ArrayList();
-        l.add(c1);
-        l.add(c2);
-        p1.setLista(l);
-        
-        l.add(c3);
-        
-        p1.setUnCoche(c3);
        
         
      

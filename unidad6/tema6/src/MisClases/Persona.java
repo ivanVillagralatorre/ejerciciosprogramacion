@@ -24,25 +24,7 @@ public class Persona {
     //private Coche c;//
 
     
-     //relacion con carnidalidad 1 a m
-    
-    private ArrayList<Coche> lista;
-
-    
-    
-    public ArrayList<Coche> getLista() {
-        return lista;
-    }
-
-    public void setLista(ArrayList<Coche> lista ) {
-        this.lista = lista;
-    }
-    
-    
-    public void setUnCoche(Coche c)
-    {   
-        lista.add(c);
-    }
+     //relacion con carnidalidad 1 a
     
     
     

@@ -34,9 +34,14 @@ public class ejercicio1 {
 
     }
 
-    public static double radio() {
-        double r = Double.parseDouble(JOptionPane.showInputDialog("escribe el radio"));
-
+    public static double radio() throws Exception {
+        double r=0;
+        try{
+          r = Double.parseDouble(JOptionPane.showInputDialog("escribe el radio"));
+          
+          
+        }catch(NumberFormatException a){JOptionPane.showConfirmDialog(null, a);}
+        catch(NullPointerException e){JOptionPane.showConfirmDialog(null, e.getCause());}
         return r;
 
     }
