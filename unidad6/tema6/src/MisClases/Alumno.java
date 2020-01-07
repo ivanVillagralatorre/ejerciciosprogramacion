@@ -1,78 +1,53 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package MisClases;
 
-import java.util.ArrayList;
+package Modelo;
 
-/**
- *
- * @author 1gdaw04
- */
 public class Alumno {
-    private int cod;
+    private String codigo;
     private String nombre;
     private String domicilio;
-    private String tlfn;
-   
-    
-      public Alumno() {
+    private String telefono;
+
+    public Alumno(String codigo, String nombre, String domicilio, String telefono) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.domicilio = domicilio;
+        this.telefono = telefono;
     }
 
-    //getter
+    public String getCodigo() {
+        return codigo;
+    }
 
-    public int getCod() {
-        return cod;
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public String getDomicilio() {
-        return domicilio;
-    }
-
-    public String getTlfn() {
-        return tlfn;
-    }
-      
-      
-    
-    
-    
-    //stter
-
-    public void setCod(int cod) {
-        this.cod = cod;
-    }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getDomicilio() {
+        return domicilio;
     }
 
     public void setDomicilio(String domicilio) {
         this.domicilio = domicilio;
     }
 
-    public void setTlfn(String tlfn) {
-        this.tlfn = tlfn;
+    public String getTelefono() {
+        return telefono;
     }
-    
-    
-    
-    
-    //metodos
-      
-      
-      
-      
-      
-      
 
-  
-    
-    
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+   @Override
+    public String toString() {
+        return "Alumno{" + "codigo primero=" + codigo + ", nombre=" + nombre + ", domicilio=" + domicilio + ", telefono=" + telefono + '}';
+    }
 }
