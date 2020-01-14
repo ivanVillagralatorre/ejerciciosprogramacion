@@ -18,7 +18,6 @@ public class Empleado extends Persona {
     public Empleado() {
     }
 
-    
     public Empleado(int sueldo_bruto, Directivo d, Empresa e) {
         this.sueldo_bruto = sueldo_bruto;
         this.d = d;

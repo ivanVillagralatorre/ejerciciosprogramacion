@@ -12,9 +12,9 @@ import java.util.ArrayList;
  * @author 1gdaw04
  */
 public class Directivo extends Empleado {
-    
+
     private String categoria;
-    
+
     private ArrayList<Empleado> listasub;
 
     public Directivo(String categoria, ArrayList<Empleado> listasub, int sueldo_bruto, String nombre, int edad) {
@@ -23,15 +23,6 @@ public class Directivo extends Empleado {
         this.listasub = listasub;
     }
 
-
-
-    
-
-  
-    
-    
-    
-    
     public Directivo(int sueldo_bruto, String nombre, int edad) {
         super(sueldo_bruto, nombre, edad);
     }
@@ -47,8 +38,6 @@ public class Directivo extends Empleado {
     public ArrayList<Empleado> getListasub() {
         return listasub;
     }
-
-   
 
     public void setListasub(ArrayList<Empleado> listasub) {
         this.listasub = listasub;
@@ -70,27 +59,9 @@ public class Directivo extends Empleado {
         this.edad = edad;
     }
 
-    
     @Override
-    public String Mostrar()
-    {return "Con nombre:  "+this.getNombre()+"   posicion:  "+this.getCategoria()+"   edad:   "+this.getEdad();}
-   
-    
-    
-   
+    public String Mostrar() {
+        return "Con nombre:  " + this.getNombre() + "   posicion:  " + this.getCategoria() + "   edad:   " + this.getEdad();
+    }
 
-   
-    
-    
-    
-
-    
-
-  
-    
-  
-    
-    
-    
-    
 }

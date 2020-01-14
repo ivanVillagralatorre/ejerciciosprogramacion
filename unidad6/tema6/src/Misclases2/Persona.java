@@ -10,7 +10,7 @@ package Misclases2;
  * @author 1gdaw04
  */
 public class Persona {
-    
+
     public String nombre;
     public int edad;
 
@@ -37,9 +37,9 @@ public class Persona {
     public void setEdad(int edad) {
         this.edad = edad;
     }
-    
-    
-    public String Mostrar(){
-        return this.getNombre();}
-    
+
+    public String Mostrar() {
+        return this.getNombre();
+    }
+
 }

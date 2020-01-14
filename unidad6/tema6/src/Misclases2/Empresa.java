@@ -12,12 +12,12 @@ import java.util.ArrayList;
  * @author 1gdaw04
  */
 public class Empresa {
-    
-   private String nombre;
-   private ArrayList<Empleado> listaemple;
-   private ArrayList<Cliente> listaclien;
-   
-   public Empresa() {
+
+    private String nombre;
+    private ArrayList<Empleado> listaemple;
+    private ArrayList<Cliente> listaclien;
+
+    public Empresa() {
     }
 
     public Empresa(String nombre, ArrayList<Empleado> listaemple, ArrayList<Cliente> listaclien) {
@@ -50,7 +50,4 @@ public class Empresa {
         this.listaclien = listaclien;
     }
 
-   
-   
-    
 }

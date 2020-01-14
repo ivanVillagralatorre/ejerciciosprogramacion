@@ -26,9 +26,8 @@ public class T6p2e3 {
         empresas();
         empleados();
         directivos();
-
         res();
-
+    
     }
 
     public static void res() {
@@ -39,6 +38,7 @@ public class T6p2e3 {
             JOptionPane.showConfirmDialog(null, " el director con mas subordinado es:"
                     + "  " + dir1.Mostrar());
         }
+
     }
 
     public static void empresas() {
@@ -63,8 +63,8 @@ public class T6p2e3 {
         emple2.setNombre("pepe");
         emple2.setSueldo_bruto(1400);
         lista1 = new ArrayList();
-        lista1.add( emple1);
-        lista1.add( emple2);
+        lista1.add(emple1);
+        lista1.add(emple2);
 
         Empleado emple3 = new Empleado();
         emple3.setEdad(13);
@@ -84,9 +84,9 @@ public class T6p2e3 {
         emple5.setNombre("jokin");
         emple5.setSueldo_bruto(1400);
         lista2 = new ArrayList();
-        lista2.add( emple3);
-        lista2.add( emple4);
-        lista2.add( emple5);
+        lista2.add(emple3);
+        lista2.add(emple4);
+        lista2.add(emple5);
     }
 
     public static void directivos() {
