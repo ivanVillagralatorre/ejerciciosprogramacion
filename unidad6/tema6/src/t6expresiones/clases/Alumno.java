@@ -15,7 +15,7 @@ public class Alumno {
     private String nombre;
     private String domicilio;
     private String telefono;
-    private int edad;
+    private String edad;
     private String sexo;
     private String fecha_nac;
     private String correoPersonal;
@@ -26,7 +26,7 @@ public class Alumno {
     public Alumno() {
     }
 
-    public Alumno(String codAlumno, String nombre, String domicilio, String telefono, int edad, String sexo, String fecha_nac, String correoPersonal, String correoClase, String Curso) {
+    public Alumno(String codAlumno, String nombre, String domicilio, String telefono, String edad, String sexo, String fecha_nac, String correoPersonal, String correoClase, String Curso) {
         this.codAlumno = codAlumno;
         this.nombre = nombre;
         this.domicilio = domicilio;
@@ -71,11 +71,11 @@ public class Alumno {
         this.telefono = telefono;
     }
 
-    public int getEdad() {
+    public String getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(String edad) {
         this.edad = edad;
     }
 
