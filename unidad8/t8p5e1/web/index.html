@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <style>
+                input:invalid {
+                  border: 2px dashed red;
+                }
+
+                input:invalid:required {
+                  background-image: linear-gradient(to right, pink, lightgreen);
+                }
+
+                input:valid {
+                  border: 2px solid black;
+              }
+    </style>
+    </head>
+    <body>
+        <div>
+            <form action="Controlador" method="post">
+                Usuario <input type ="text" name="user" required pattern="[A-Za-z0-9]{2,6}*">
+                <br>
+                Contraseña<input type ="text" name="con" required pattern="[0-9a-zA-Z]{4,10}">
+                <br>
+                <input type="submit" value="Aceptar"> 
+                 <input type="reset" value="Cancelar">
+                
+            </form>
+            
+        </div>
+    </body>
+</html>
