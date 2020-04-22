@@ -48,7 +48,7 @@ public class Ventana extends javax.swing.JFrame {
      }
    
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
@@ -75,7 +75,7 @@ public class Ventana extends javax.swing.JFrame {
 
         jLabel5.setText("Teléfono");
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Padre", 1, 16)); // NOI18N
         jLabel6.setText("Personas");
 
         bAceptar.setText("Aceptar");

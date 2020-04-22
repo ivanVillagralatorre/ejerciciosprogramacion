@@ -22,8 +22,6 @@ public class Principal {
     {
         try
         {
-            // Ya no hay ArrayList inventados o creados
-            // Ahora hay una base de datos
             bdcon = new conex();
             bdcon.conectar();
             personaDAO = new personas(bdcon.getConnection());
@@ -39,7 +37,7 @@ public class Principal {
       
     public static void alta() 
     {
-        // Quieren dar de alta una persona
+       
         vm.setVisible(false);
         
         v = new Ventana();
@@ -48,14 +46,14 @@ public class Principal {
     
     public static void registrarPersona(String n, Integer e, String pr, String t)throws Exception
     {
-         // Crear  y llenar el objeto
+        
          Persona miPersona=new Persona();
          miPersona.setNombre(n);
          miPersona.setEdad(e);
          miPersona.setProfesion(pr);
          miPersona.setTelefono(t);
 
-         // Ir a la base de datos
+        
          personaDAO.registrarPersona(miPersona);
     }
          
@@ -77,7 +75,7 @@ public class Principal {
             return false;
         return true;
         
-        // return posicion != listaPersonas.size()-1;
+       
     }
     
     public static boolean isAnterior()
@@ -85,14 +83,14 @@ public class Principal {
         if (posicion == 0)
             return false;
         return true;
-        // return posicion != 0;
+       
     }
     
     public static void obtenerDatos() throws Exception
     {
-        //Se obtiene la lista de personas
+        
         listaPersonas = personaDAO.listaDePersonas();
-        //Se comprueba si hay información
+       
         if (listaPersonas.size()>0) 
         {
             // Paso a la ventana los datos del primero

@@ -31,10 +31,10 @@ public class VMenu extends javax.swing.JFrame {
         jLabel1.setText("Elige una opción");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel2.setText("1.- Registrar una persona");
+        jLabel2.setText("1.- Registrar  persona");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel3.setText("2.- Consultar datos de una persona");
+        jLabel3.setText("2.- Consultar datos  persona");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setText("3.- Consultar personas");
@@ -43,7 +43,7 @@ public class VMenu extends javax.swing.JFrame {
         jLabel5.setText("4.- Salir");
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel6.setText("Opción elegida");
+        jLabel6.setText("opción elegidaa");
 
         tfOpcion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

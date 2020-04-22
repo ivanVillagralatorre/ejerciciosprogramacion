@@ -42,7 +42,6 @@ public class personas {
        consulta.setString(1, nombre);
        ResultSet res = consulta.executeQuery();
 
-       // Sólo puede haber una persona con ese nombre
        if(res.next())
        {
           persona=crearObjeto(res);
@@ -67,7 +66,6 @@ public class personas {
     {
         ArrayList< Persona> listaPersonas = new ArrayList();
 
-        // Es más seguro con preparedStatement
         Statement consulta = con.createStatement();
         ResultSet res = consulta.executeQuery("Select * from personas");
         
