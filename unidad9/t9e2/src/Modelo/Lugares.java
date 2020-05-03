@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package excepcion;
+package Modelo;
 
 /**
  *
  * @author iv
  */
-public class Novalido extends Exception{
-    
+public enum Lugares {
+    Artium, BuesaArena, IradierArena, Mendizorroza, TeatroPrincipal;
 }
