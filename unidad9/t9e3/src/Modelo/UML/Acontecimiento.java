@@ -6,7 +6,7 @@ import java.util.Date;
 import java.time.LocalTime;
 
 public class Acontecimiento {
-    // No pongo id en la clase, pero en la base de datos podría tenerlo.
+    
     private String nombre;
     private String lugar;
     private LocalDate fecha;

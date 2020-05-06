@@ -34,19 +34,19 @@ public class Controlador {
     }
     
     public static void visualizarVentanaAlta(){
-        // Dejo por debajo la principal
+     
          ve = new VentanaAcontecimientos("alta");
          ve.setVisible(true);
     }
     
    public static void visualizarVentanaEliminar(){
-         // Dejo por debajo la principal
+
          ve = new VentanaAcontecimientos("baja");
          ve.setVisible(true);
    }
    
    public static void visualizarVentanaEditar(){
-         // Dejo por debajo la principal
+        
          ve = new VentanaAcontecimientos("modificacion");
          ve.setVisible(true);
    }
@@ -56,7 +56,7 @@ public class Controlador {
     }
     
     public static void grabarAcontecimiento(String nombre, String lugar, LocalDate localDate, LocalTime localTimeInicio, LocalTime localTimeFin, int nro) throws Exception{
-        // Crear objeto e insertarlo en la base de datos
+        
         acontecimiento = new Acontecimiento(nombre,lugar, localDate,localTimeInicio,localTimeFin,nro);
         abd.alta(acontecimiento);
     }
