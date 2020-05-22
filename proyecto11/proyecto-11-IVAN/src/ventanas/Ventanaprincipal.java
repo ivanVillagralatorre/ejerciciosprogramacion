@@ -44,6 +44,7 @@ public class Ventanaprincipal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         insertClie = new javax.swing.JMenu();
         insertclie = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         jPanel3.setBackground(java.awt.Color.black);
 
@@ -73,6 +74,7 @@ public class Ventanaprincipal extends javax.swing.JFrame {
         jLabel2.setText("Hora del sistema : ");
 
         hora.setEditable(false);
+        hora.setBackground(java.awt.Color.cyan);
         hora.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 horaActionPerformed(evt);
@@ -148,6 +150,14 @@ public class Ventanaprincipal extends javax.swing.JFrame {
         });
         insertClie.add(insertclie);
 
+        jMenuItem1.setText("Borrar Cliene");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        insertClie.add(jMenuItem1);
+
         jMenuBar1.add(insertClie);
 
         setJMenuBar(jMenuBar1);
@@ -178,6 +188,11 @@ public class Ventanaprincipal extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        main.Vclientesborrar();
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private String hactual(){
     LocalDateTime h = LocalDateTime.now();
@@ -230,6 +245,7 @@ public class Ventanaprincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

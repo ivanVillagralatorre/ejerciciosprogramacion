@@ -27,8 +27,10 @@ public class main {
     private static Ventanaprincipal vp;
     private static Ventanareservas vr;
     private static VentanaClientes vc;
+    private static VentanaClienteBorrar vcb;
     private static String dnivalidar = null;
     private static Cliente c;
+    
     
 
     public static void main(String[] args) throws Exception {
@@ -37,10 +39,13 @@ public class main {
             bd.conectar();
             tc = new TablaClientes(bd.getCon());
             Vprincipal();
-           ingresarcliente(c); 
+           ingresarcliente(c);
+         Borrarcliente(c);
         } catch (Exception e) {
-
+               System.out.print(e);
         }
+
+      
 
     }
 
@@ -59,6 +64,16 @@ public class main {
         vc.VisibleInsertar();
 
     }
+    
+    public static void Vclientesborrar() {
+        vp.dispose();
+        vcb = new VentanaClienteBorrar();
+        vcb.setVisible(true);
+    
+    }
+     public static void Vclientesborrarcerrar() {
+        vcb.dispose();
+    }
 
     public static void Vreservas() {
         vp.dispose();
@@ -66,6 +81,8 @@ public class main {
         vr.setVisible(true);
     }
 
+    
+    
     public static Cliente buscarDni(String dnivalidar) throws Exception {
         Cliente c = tc.BuscarClie(dnivalidar);
         return c;
@@ -76,6 +93,14 @@ public class main {
        
        tc.insertar(c);
        JOptionPane.showMessageDialog(null, "Insertado de forma correcta");
+       }catch(Exception e){JOptionPane.showConfirmDialog(null,"fallo inexplicable");} 
+
+    }
+    
+     public static void Borrarcliente(Cliente c) throws Exception {
+       try{
+       tc.borrar(c);
+       JOptionPane.showMessageDialog(null, "Se ha borrado exitosamente el usuario con dni: "+c.getDni());
        }catch(Exception e){JOptionPane.showConfirmDialog(null,"fallo inexplicable");} 
 
     }

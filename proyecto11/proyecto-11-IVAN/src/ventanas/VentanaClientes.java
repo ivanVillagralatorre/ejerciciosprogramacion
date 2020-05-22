@@ -219,6 +219,7 @@ public class VentanaClientes extends javax.swing.JFrame {
     private void dniFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dniFocusGained
        dni.setText("");
         dni.setBackground(Color.white);
+        dni.setForeground(Color.BLACK);
     }//GEN-LAST:event_dniFocusGained
 
     private void dniFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_dniFocusLost
@@ -274,7 +275,7 @@ public class VentanaClientes extends javax.swing.JFrame {
          
         }catch(Exception e)
         {
-            
+           
         }
     }//GEN-LAST:event_bvalidarActionPerformed
 

@@ -37,13 +37,13 @@ public class TablaClientes {
         if (n != 1)
             throw new Exception("El número de filas actualizadas no es uno");
     }
-       public void borrar(Cliente c) throws Exception
+     public void borrar(Cliente c) throws Exception
     {
         // no es necesario todo el objeto con el dni es suficiente
         
-        String plantilla = "Delete from tpersonas where dni=?;";
+        String plantilla = "Delete from clientes where dni=?;";
         PreparedStatement ps = con.prepareStatement(plantilla);
-        ps.setString(2, c.getDni());
+        ps.setString(1, c.getDni());
       
         int n = ps.executeUpdate();
         ps.close();
